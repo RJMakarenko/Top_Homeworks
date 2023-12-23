@@ -136,6 +136,7 @@ class GameManager:
     """
     Класс обработки запуска игры
     """
+
     def __init__(self, json_file: JsonFile, cities: Cities, game: CitiesGame):
         self.json_file = json_file
         self.cities = cities
@@ -147,6 +148,7 @@ class GameManager:
                 break
             if not self.game.ai_step():
                 break
+
     @staticmethod
     def player_meeting():
         print('Привет! Сыграем в "Города"?')
@@ -175,4 +177,3 @@ if __name__ == "__main__":
     game_manager = GameManager(json_file, cities, game)
     # # Запускаем игру
     game_manager()
-
